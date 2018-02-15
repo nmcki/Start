@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Sound" sid="580012375320399" static="0" type="text">on</variable>
+        <variable constant="0" name="Sun" sid="141944871580240" static="0" type="number">0</variable>
+        <variable constant="0" name="Health" sid="788305554991141" static="0" type="number">4</variable>
+        <event-group description="" sid="973302034850878" title="Player Controls">
+            <sub-events>
+                <event-block sid="806451937156096">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="231103532600958" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="840937385313977" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="997498469160287" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="171561039274090">
+            <conditions>
+                <condition id="2" name="Key is down" sid="133710866927531" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="547636520968057" type="Player" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="504282512544336" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="306924158623130">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="580189581949680" type="Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="201316040176358" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="894145709746459" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348469725564941">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="482360803035571" type="Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="619976898287854" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="421234541494728" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314015298251433">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="217366545959438" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="476236317697440" type="Player">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="953227560246794">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="315203556822995" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="612428779813103" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="906691415094453" title="Enemy Interactions" />
+        <event-block sid="201961964797658">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="775406804538315" type="Player">
+                    <param id="0" name="Object">Coffee</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="402273237533852" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="713348022199606" type="Coffee" />
+                <action behavior="Flash" id="0" name="Flash" sid="418631912767385" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.5</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="238733618604670" type="Coffee">
+                    <param id="0" name="Object">Smoke</param>
+                    <param id="1" name="Layer">&quot;game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="640574861147144" title="Collectables and Health" />
+        <event-block sid="199926476761307">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="984508618942780" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="715805157501620" type="SunText">
+                    <param id="0" name="Text">Sun</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="121553312536578">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="383006264246051" type="System" />
+                <condition id="-14" name="Compare variable" sid="933331538959989" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="169489049650723" type="Healthbar">
+                    <param id="0" name="Animation">&quot;Full&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="383636025968127">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="303970920480128" type="System" />
+                <condition id="-14" name="Compare variable" sid="448583652426072" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="688410422169014" type="Healthbar">
+                    <param id="0" name="Animation">&quot;OneHit&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432990373305040">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="678148362935971" type="System" />
+                <condition id="-14" name="Compare variable" sid="273731812377517" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="495799356500705" type="Healthbar">
+                    <param id="0" name="Animation">&quot;TwoHit&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="296233361569799">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="437417390790097" type="System" />
+                <condition id="-14" name="Compare variable" sid="435044237330906" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="713622656046250" type="Healthbar">
+                    <param id="0" name="Animation">&quot;ThreeHit&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155020203651696">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="759383369275975" type="System" />
+                <condition id="-14" name="Compare variable" sid="403852143628976" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="377717588748591" type="Healthbar">
+                    <param id="0" name="Animation">&quot;Dead&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="125265444673936">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="453971501510937" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="206028467347526" type="Player" />
+                <action id="-26" name="Restart layout" sid="566826614513861" type="System" />
+                <action id="-9" name="Set value" sid="612859938150908" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="696856890881573" type="System">
+                    <param id="0" name="Variable">Sun</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368366191994303">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="104094187853466" type="Player">
+                    <param id="0" name="Object">Sunlight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="866016296417411" type="Sunlight" />
+                <action id="-10" name="Add to" sid="618533256371319" type="System">
+                    <param id="0" name="Variable">Sun</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="446622861266992" title="Pop Ups" />
+        <event-block sid="625555426229473">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="164722066341945" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="143708677464530" type="System">
+                    <param id="0" name="Layer">&quot;PopUp&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="644369868844050" type="System">
+                    <param id="0" name="Time scale">1 - timescale</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350973832887910">
+            <conditions>
+                <condition id="17" name="On tap object" sid="962861710007690" type="Touch">
+                    <param id="0" name="Object">Startbutton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="126758563703616" type="System">
+                    <param id="0" name="Layer">&quot;PopUp&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="824817160843668" type="System">
+                    <param id="0" name="Time scale">1.0 - timescale</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="249944346258105">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="340169367663101" type="System">
+                    <param id="0" name="Variable">Sun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="616813115080668">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="635223124387286" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="980582955001515" type="Door">
+                            <param id="0" name="Animation">&quot;open&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="555825564195870">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="725860715264352" type="Player">
+                    <param id="0" name="Object">Finish</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="552106214081982" type="System">
+                    <param id="0" name="Layer">&quot;PopUp&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="266642198557204" type="System">
+                    <param id="0" name="Time scale">1 - timescale</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="687984059502821">
+            <conditions>
+                <condition id="17" name="On tap object" sid="286589704223835" type="Touch">
+                    <param id="0" name="Object">Restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="429904795037581" type="System" />
+                <action id="-13" name="Set time scale" sid="984329752999322" type="System">
+                    <param id="0" name="Time scale">1 - timescale</param>
+                </action>
+                <action id="-9" name="Set value" sid="726000332785057" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="814508489179426" type="System">
+                    <param id="0" name="Variable">Sun</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="900048606785679">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="477034595669070" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="269305817524524" type="Audio">
+                    <param id="0" name="Audio file">Bit Shift</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
