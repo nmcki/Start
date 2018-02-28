@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Layout 1</layout>
+        <layout order="1">Layout 2</layout>
+        <layout order="2">Layout 3</layout>
+        <event-sheet order="3">Event sheet 1</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="0" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="0" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Background/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Asset/" />
+        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/Coffee/" />
+        <folder expanded="1" path="animation-folder/Smoke/" />
+        <folder expanded="1" path="animation-folder/Sunlight/" />
+        <folder expanded="1" path="animation-folder/Sun/" />
+        <folder expanded="1" path="animation-folder/StartBox/" />
+        <folder expanded="1" path="animation-folder/Startbutton/" />
+        <folder expanded="1" path="animation-folder/EndBox/" />
+        <folder expanded="1" path="animation-folder/Restart/" />
+        <folder expanded="1" path="animation-folder/Door/" />
+        <folder expanded="1" path="animation-folder/Finish/" />
+        <folder expanded="1" path="animation-folder/Next2/" />
+        <folder expanded="1" path="animation-folder/Asset2/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Pillow/" />
+        <folder expanded="1" path="animation-folder/JumpRope/" />
+        <folder expanded="1" path="animation-folder/Background3/" />
+        <folder expanded="1" path="animation-folder/Bed/" />
+        <folder expanded="1" path="animation-folder/Asset3/" />
+        <folder expanded="1" path="animation-folder/PillowFort/" />
+        <folder expanded="1" path="animation-folder/TV/" />
+        <folder expanded="1" path="animation-folder/Phone/" />
+        <folder expanded="1" path="animation-folder/Pillow2/" />
+        <folder expanded="1" path="animation-folder/Nextbutton/" />
+        <folder expanded="1" path="animation-folder/Player2/" />
+        <folder expanded="1" path="animation-folder/HUDBar/" />
+        <folder expanded="1" path="animation-folder/empty/" />
+        <folder expanded="1" path="animation-folder/Full/" />
+        <folder expanded="1" path="animation-folder/OneHit/" />
+        <folder expanded="1" path="animation-folder/ThreeHit/" />
+        <folder expanded="1" path="animation-folder/TwoHit/" />
+        <folder expanded="1" path="animation-folder/Music/" />
+        <folder expanded="1" path="animation-folder/PauseButton/" />
+        <folder expanded="1" path="animation-folder/Menu/" />
+        <folder expanded="1" path="animation-folder/PopUp/" />
+        <folder expanded="1" path="animation-folder/PopupButton/" />
+    </folders-expanded>
+</c2uistate>

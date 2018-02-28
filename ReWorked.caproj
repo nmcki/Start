@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>ReWorked</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>avrahu1ezfza</unique-id>
+    <saved-with-version>25200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="765164373626644">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571773795152276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180208T183517Z-001\720x480BackGround-01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="949757867653112">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="846456862321630" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="217922846238830">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="334987038460245">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="643858176306847">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="815482176475952">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="397523191344133" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Standing-01.png">
+                        <image-point name="Imagepoint 1" x="0.269911" y="-2.43178" />
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="869887448221863" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-02.png" />
+                    <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500924" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-05.png" />
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500924" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500924" original-source="C:\Users\Nick\Downloads\drive-download-20180131T194913Z-001\Character_Right_Animation-08.png" />
+                </animation>
+                <animation framecount="9" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="880823945940866" speed="5">
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501002" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-02.png" />
+                    <frame duration="1" hotspotX="0.501695" hotspotY="0.501053" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-03.png" />
+                    <frame duration="1" hotspotX="0.501393" hotspotY="0.500864" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50101" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-05.png" />
+                    <frame duration="1" hotspotX="0.501247" hotspotY="0.501149" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50101" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-07.png" />
+                    <frame duration="1" hotspotX="0.501529" hotspotY="0.500864" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-09.png" />
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501002" original-source="C:\Users\Nick\Downloads\drive-download-20180131T225837Z-001\Character_Jump_Animation-10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Asset" sid="927082216246454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357020081997971" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503704" original-source="C:\Users\Nick\Downloads\Asset 3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ground" sid="933967670141120">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="118386417452144">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722240911346542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Coffee" sid="874040919128545">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="177111742967219">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="397400378322658" speed="5">
+                    <frame duration="1" hotspotX="0.502242" hotspotY="0.501567" original-source="C:\Users\Nick\Downloads\drive-download-20180206T191516Z-001\coffee_Walk-01.png" />
+                    <frame duration="1" hotspotX="0.502242" hotspotY="0.501567" original-source="C:\Users\Nick\Downloads\drive-download-20180206T191516Z-001\coffee_Walk-03.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Healthtext" sid="308418714291549">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="type" sid="557389253817487" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Smoke" sid="576900754983981">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="811598911052922">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="726129086205178">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Smoke" pingpong="0" repeatcount="1" repeatto="0" sid="419256298224300" speed="5">
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.502283" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-01.png" />
+                    <frame duration="1" hotspotX="0.498403" hotspotY="0.501608" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-03.png" />
+                    <frame duration="1" hotspotX="0.501023" hotspotY="0.498829" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-04.png" />
+                    <frame duration="1" hotspotX="0.469667" hotspotY="0.551308" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-06.png" />
+                    <frame duration="1" hotspotX="0.483077" hotspotY="0.536953" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-07.png" />
+                    <frame duration="1" hotspotX="0.499303" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-08.png" />
+                    <frame duration="1" hotspotX="0.518006" hotspotY="0.520661" original-source="C:\Users\Nick\Downloads\drive-download-20180212T181511Z-001\Puff-09.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sunlight" sid="720331570722866">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Sun" pingpong="0" repeatcount="1" repeatto="0" sid="453697521658399" speed="5">
+                    <frame duration="1" hotspotX="0.500956" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T183929Z-001\Sun-01.png" />
+                    <frame duration="1" hotspotX="0.498938" hotspotY="0.501071" original-source="C:\Users\Nick\Downloads\drive-download-20180212T183929Z-001\Sun-02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501285" original-source="C:\Users\Nick\Downloads\drive-download-20180212T183929Z-001\Sun-03.png" />
+                    <frame duration="1" hotspotX="0.501062" hotspotY="0.501071" original-source="C:\Users\Nick\Downloads\drive-download-20180212T183929Z-001\Sun-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sun" sid="899665162797018">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348207312625239" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T183929Z-001\Sun-01.png">
+                        <collision-poly>
+                            <point x="0.354916" y="0.354916" />
+                            <point x="0.5" y="0.190647" />
+                            <point x="0.643885" y="0.356115" />
+                            <point x="0.720623" y="0.5" />
+                            <point x="0.708633" y="0.708633" />
+                            <point x="0.5" y="0.694245" />
+                            <point x="0.291367" y="0.708633" />
+                            <point x="0.278177" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExerciseText" sid="407528094600242">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="type" sid="650830461694838" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="StartBox" sid="214292922636469">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577250661763128" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\Memo Box.png">
+                        <collision-poly>
+                            <point x="0.006" y="0.01" />
+                            <point x="0.994" y="0.01" />
+                            <point x="0.994" y="0.99" />
+                            <point x="0.006" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Startbutton" sid="422100301373949">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435831909931730" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\button.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.970588" y="0.09375" />
+                            <point x="0.990196" y="0.5" />
+                            <point x="0.970588" y="0.90625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EndBox" sid="594831684810335">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676318200256166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\Memo Box.png">
+                        <collision-poly>
+                            <point x="0.006" y="0.01" />
+                            <point x="0.994" y="0.01" />
+                            <point x="0.994" y="0.99" />
+                            <point x="0.006" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Restart" sid="782910572797793">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="173793532280839" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\button.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.970588" y="0.09375" />
+                            <point x="0.990196" y="0.5" />
+                            <point x="0.970588" y="0.90625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="941465124005145">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Touch" sid="992245986536200">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Door" sid="225754592635335">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="closed" pingpong="0" repeatcount="1" repeatto="0" sid="255520716589356" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-01.png" />
+                </animation>
+                <animation framecount="5" loop="0" name="open" pingpong="0" repeatcount="1" repeatto="0" sid="870402973772667" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-01.png" />
+                    <frame duration="1" hotspotX="-0.141104" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-02.png" />
+                    <frame duration="1" hotspotX="-0.0942857" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-03.png" />
+                    <frame duration="1" hotspotX="0.321755" hotspotY="0.500537" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-04.png" />
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.500537" original-source="C:\Users\Nick\Downloads\drive-download-20180213T210815Z-001\door-05.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Finish" sid="101700881977299">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898020544599093" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Next2" sid="793290395778661">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987559583566248" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\button.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.970588" y="0.09375" />
+                            <point x="0.990196" y="0.5" />
+                            <point x="0.970588" y="0.90625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="402975761297924">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Level1starttxt" sid="137255978483934">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="108688158514684">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Level1Endtxt" sid="856346946202837">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="512706138716196">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="145783330050708">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TiledBackground" sid="421374401756790">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Nick\Downloads\drive-download-20180208T183517Z-001\720x480BackGround-02.png" />
+        </object-type>
+        <object-type name="Asset2" sid="532026690494436">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810843560013278" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503704" original-source="C:\Users\Nick\Downloads\Asset 3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="263897043076518">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="688694992303168">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109326680645512" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pillow" sid="413658929608982">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="904904950815516">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="999457246782014">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Pillow" pingpong="0" repeatcount="1" repeatto="0" sid="681019608324550" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.159184" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-01.png" />
+                    <frame duration="1" hotspotX="0.510018" hotspotY="-0.003367" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.159184" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.132353" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JumpRope" sid="527168205231497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840696502258456" speed="5">
+                    <frame duration="1" hotspotX="0.50211" hotspotY="0.501401" original-source="C:\Users\Nick\Downloads\jumprope.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text6" sid="816944087189590">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text7" sid="526383329532537">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Background3" sid="471279552033293">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713825076954262" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180208T183517Z-001\720x480BackGround-03.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bed" sid="760106079996883">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827819973627241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072742Z-001\Bed.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Asset3" sid="600336656290604">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736666941678514" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503704" original-source="C:\Users\Nick\Downloads\Asset 3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PillowFort" sid="954413486367371">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618840855925669" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072742Z-001\Pillow_Fort.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TV" sid="205109649196292">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="253578662023790" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="494283533055136">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="566211232318534" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072852Z-001\TV-01.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072852Z-001\TV-02.png" />
+                    <frame duration="1" hotspotX="0.500697" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072852Z-001\TV-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501018" original-source="C:\Users\Nick\Downloads\drive-download-20180221T072852Z-001\TV-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Phone" sid="760168256392510">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="243679977719301" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="771542655750761">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236328289776976" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="C:\Users\Nick\Downloads\drive-download-20180221T074238Z-001\phone-01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T074238Z-001\phone-02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T074238Z-001\phone-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180221T074238Z-001\phone-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="713154571194216">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Pillow2" sid="679135196384928">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="328713594448399">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="670870292605671">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977667943677221" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.159184" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-01.png" />
+                    <frame duration="1" hotspotX="0.510018" hotspotY="-0.003367" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.159184" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.132353" original-source="C:\Users\Nick\Downloads\drive-download-20180216T194229Z-001\Pillow-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Suntext" sid="103292725960703">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="sun" sid="955653338597285" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Nextbutton" sid="531214216740648">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="705123307742318" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\button.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.970588" y="0.09375" />
+                            <point x="0.990196" y="0.5" />
+                            <point x="0.970588" y="0.90625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="165724094230093">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="414329117742901">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text8" sid="989168962633464">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Player2" sid="547284749280138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="944512992748792" speed="5">
+                    <frame duration="1" hotspotX="0.414545" hotspotY="0.40625" original-source="C:\Users\Nick\Downloads\drive-download-20180222T174034Z-001\Character_throwing_Pillow-01.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Throw" pingpong="0" repeatcount="1" repeatto="0" sid="818857117630779" speed="5">
+                    <frame duration="1" hotspotX="0.414545" hotspotY="0.40625" original-source="C:\Users\Nick\Downloads\drive-download-20180222T174034Z-001\Character_throwing_Pillow-01.png">
+                        <image-point name="Imagepoint 1" x="1.01455" y="0.512019" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.413043" hotspotY="0.40625" original-source="C:\Users\Nick\Downloads\drive-download-20180222T174034Z-001\Character_throwing_Pillow-02.png" />
+                    <frame duration="1" hotspotX="0.413043" hotspotY="0.40625" original-source="C:\Users\Nick\Downloads\drive-download-20180222T174034Z-001\Character_throwing_Pillow-03.png" />
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.403846" original-source="C:\Users\Nick\Downloads\drive-download-20180222T174034Z-001\Character_throwing_Pillow-04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUDBar" sid="908123248342381">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399800371093133" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\HUD.png">
+                        <collision-poly>
+                            <point x="0.00487805" y="0.0327869" />
+                            <point x="0.5" y="0" />
+                            <point x="0.995122" y="0.0327869" />
+                            <point x="0.992683" y="0.95082" />
+                            <point x="0.5" y="0.983607" />
+                            <point x="0.00731707" y="0.95082" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="empty" sid="465362051715971">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621071475327384" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\MeterBlank.png">
+                        <collision-poly>
+                            <point x="0.0169492" y="0.142857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.983051" y="0.142857" />
+                            <point x="0.983051" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0169492" y="0.857143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Full" sid="561974452389985">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="352172040389914" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\MeterGreen.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0714286" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.9375" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9375" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.21875" y="0.5" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="OneHit" sid="828265853889428">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="498687008445235" speed="5">
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\MeterYellow.png">
+                        <collision-poly>
+                            <point x="0.0204082" y="0.0714286" />
+                            <point x="0.489796" y="0.0714286" />
+                            <point x="0.857143" y="0.5" />
+                            <point x="0.857143" y="0.5" />
+                            <point x="0.489796" y="1" />
+                            <point x="0.142857" y="0.5" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ThreeHit" sid="202998254463120">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296353098246189" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\MeterRed.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.142857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.96875" y="0.928571" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TwoHit" sid="167448904244112">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284176769504840" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\MeterOrange.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.0714286" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.86" y="0.5" />
+                            <point x="0.86" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0.14" y="0.5" />
+                            <point x="0.14" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Music" sid="542504224336255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="333767231619060" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.52381" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\Play.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Mute" pingpong="0" repeatcount="1" repeatto="0" sid="657915847878618" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\Mute.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.142857" />
+                            <point x="0.954545" y="0.47619" />
+                            <point x="0.818182" y="0.809524" />
+                            <point x="0.5" y="0.952381" />
+                            <point x="0.181818" y="0.809524" />
+                            <point x="0.0454545" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PauseButton" sid="865856849879408">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101978358729618" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.52381" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\Pause.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.47619" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.47619" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.47619" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menu" sid="439577652067770">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316965210692259" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.52381" original-source="C:\Users\Nick\Downloads\drive-download-20180222T214253Z-001\Menu.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.47619" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.47619" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.47619" y="0.952381" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PopUp" sid="381616341446911">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720386793046693" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\Memo Box.png">
+                        <collision-poly>
+                            <point x="0.006" y="0.01" />
+                            <point x="0.994" y="0.01" />
+                            <point x="0.994" y="0.99" />
+                            <point x="0.006" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SunPopUp" sid="723371797626806">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ExercisePopUp" sid="152579732318954">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PopupButton" sid="325880615420513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574198025316335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nick\Downloads\drive-download-20180212T184034Z-001\button.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.970588" y="0.09375" />
+                            <point x="0.990196" y="0.5" />
+                            <point x="0.970588" y="0.90625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Layout 2.xml</layout>
+        <layout>Layout 3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="24" />
+        <global-instance type="Touch" uid="25">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="30">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="71" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="Bit Shift.m4a" />
+        <file name="Bit Shift.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
